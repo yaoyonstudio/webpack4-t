@@ -1,0 +1,380 @@
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+/* 去除文字选中时的阴影 */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* 去除input number 上下箭头 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* normalize 结束 */
+
+
+
+html {
+  font-size: 625%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #666;
+  font-family: "Microsoft Yahei", 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: .16rem;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 560%;
+  }
+}
+
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.equal-w-h {
+  background: #333;
+  width: 50%;
+}
+
+.equal-w-h::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+
+.equal-w-h::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@mixin mul-overflow($line: 2, $height: 40px, $fontsize: 14px) {
+  display: block;
+  display: -webkit-box;
+  width: 100%;
+  height: $height;
+  font-size: $fontsize;
+  line-height: $height / $line;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-overflow {
+  display: block;
+  width: 100%;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrow-up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 12px 12px;
+  border-style: solid;
+  border-color: transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrow-down {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  border-color: #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrow-left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrow-right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gradient {
+  background-image: linear-gradient(90deg, #ff8e2b, #ffa308);
+}
+
+.full-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999999;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+
+.ios-checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 26px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 54px;
+    height: 30px;
+    background: #dde4e9;
+    border-radius: 34px;
+    transition: all .375s;
+    cursor: pointer;
+  }
+
+  &:after {
+    height: 24px;
+    width: 24px;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all .375s;
+    top: 0;
+    left: 0px;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    cursor: pointer;
+  }
+
+  &:checked {
+    &:before {
+      background: #4cd764;
+    }
+
+    &:after {
+      transform: translateX(100%);
+    }
+
+    &:disabled {
+      background: #fff;
+    }
+  }
+}
+
+
+
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio input[type="radio"]+.radio-label:before {
+  content: '';
+  background: #fff;
+  border-radius: 100%;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  position: absolute;
+  right: 0;
+  margin-right: 1em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.radio input[type="radio"]:checked+.radio-label:before {
+  background-color: #d33;
+  -webkit-box-shadow: inset 0 0 0 4px #fff;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+.radio input[type="radio"]:focus+.radio-label:before {
+  outline: none;
+  border-color: #d33;
+}
+
+.radio input[type="radio"]:disabled+.radio-label:before {
+  -webkit-box-shadow: inset 0 0 0 4px #fff;
+  box-shadow: inset 0 0 0 4px #fff;
+  border-color: #bfbfbf;
+  background: #bfbfbf;
+}
+
+.radio input[type="radio"]+.radio-label:empty:before {
+  margin-right: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
